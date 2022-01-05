@@ -1,0 +1,6 @@
+('c:\\program '
+ 'files\\python39\\lib\\site-packages\\brotli-1.0.9-py3.9-win-amd64.egg',
+ None,
+ {'*.pyd', '*.pyw', 'EGG-INFO', '*.pyc', '*.py', '*.cp39-win_amd64.pyd'},
+ 'DATA',
+ [])

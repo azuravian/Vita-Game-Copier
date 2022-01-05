@@ -1,5 +1,8 @@
 # vita_game_copier.py
 import sys
+import re
+import requests
+import webbrowser
 import PySimpleGUI as sg
 import os.path
 import shutil
@@ -11,6 +14,7 @@ patchesout = []
 dlcout = []
 repatchout = []
 readdcontout = []
+fileout = []
 
 # Left Column
 file_list_column = [
@@ -24,6 +28,14 @@ file_list_column = [
             values=[], select_mode='extended', enable_events=True, size=(48, 20), key="-FILE LIST-"
         )
     ],
+    [
+        sg.Button("Show Details", enable_events=True, key="-DETAILS-")
+    ]
+]
+
+arrow_column = [
+    [sg.Button(button_text="⟶", enable_events=True, key="-ARROW R-")],
+    [sg.Button(button_text="⟵", enable_events=True, key="-ARROW L-")]
 ]
 
 # Middle Column
@@ -79,6 +91,8 @@ layout = [
     [
         sg.Column(file_list_column),
         sg.VSeperator(),
+        sg.Column(arrow_column),
+        sg.VSeperator(),
         sg.Column(copy_column),
         sg.VSeparator(),
         sg.Column(output_column)
@@ -86,6 +100,7 @@ layout = [
 ]
 
 window = sg.Window("Vita Game Copier", layout)
+
 
 # Code that copies game and extras
 def copy_game(gamename, path, sdpath):
@@ -158,33 +173,65 @@ while True:
         folder = values["-NPSFOLDER-"]
         appfolder = os.path.join(folder, "app")
         gamedict = {}
+        ciddict = {}
         try:
             dirlist = [ item for item in os.listdir(appfolder) if os.path.isdir(os.path.join(appfolder, item)) ]
         except:
             dirlist = []
 
-        filename = resource_path('PSV_GAMES.tsv')
-        with open(filename, encoding="utf-8") as tsvfile:
-            reader = csv.DictReader(tsvfile, dialect='excel-tab')
+        tsv = 'https://nopaystation.com/tsv/PSV_GAMES.tsv'
+        headers={'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36 SE 2.X MetaSr 1.0'}
+        with requests.Session() as s:
+            r = s.get(tsv, headers=headers)
+            content = r.content.decode('utf-8')
+            reader = csv.DictReader(content.splitlines(), dialect='excel-tab')
             for row in reader:
                 for directory in dirlist:
                     if row['Title ID']==directory:
                         gamedict[row['Name']] = row['Title ID']
+                        ciddict[row['Name']] = row['Content ID']
         filelist = list(sorted(gamedict.keys()))
         window["-FILE LIST-"].update(filelist)
-    elif event == "-FILE LIST-":  # A file was chosen from the listbox
+    elif event == "-DETAILS-": # Details button pressed
         try:
-            fileout = list(values["-FILE LIST-"])
+            filenow = values["-FILE LIST-"][-1]
+            contentid = ciddict.get(filenow)
+            gameid = gamedict.get(filenow)
+            m = re.search(r'[^-]*(?!.*-)', contentid)
+            url = "https://nopaystation.com/view/PSV/" + gameid + "/" + m.group(0) + "/1"
+            webbrowser.open(url, new=0, autoraise=True)
+            
+        except Exception as e:
+            print(e)
+
+    elif event == "-ARROW R-":  # Right arrow button was pressed
+        try:
+            fileout += list(values["-FILE LIST-"])
+            fileout = list(set(fileout))
             window["-SELECT LIST-"].update(fileout)
-        except:
-            pass
+        
+        except Exception as e:
+            print(e)
+
+    elif event == "-ARROW L-":  # Left arrow button was pressed
+        try:
+            window["-FILE LIST-"].update(set_to_index=[])
+            filedel = list(values["-SELECT LIST-"])
+            for e in filedel:
+                if e in fileout:
+                    fileout.remove(e)
+            window["-SELECT LIST-"].update(fileout)
+            
+        except Exception as e:
+            print(e)
+
     elif event == "Submit":  # Submit button was pressed
         try:
-            fileout = list(values["-FILE LIST-"])
             if fileout:
                 for f in fileout:
                     copy_game(f, values["-NPSFOLDER-"], values["-SDFOLDER-"])
-        except:
-            print("failed")
+        
+        except Exception as e:
+            print(e)
 
 window.close()
