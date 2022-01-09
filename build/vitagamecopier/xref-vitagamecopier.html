@@ -105,6 +105,7 @@ imports:
  &#8226;   <a href="#collections.abc">collections.abc</a>
  &#8226;   <a href="#copyreg">copyreg</a>
  &#8226;   <a href="#csv">csv</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
  &#8226;   <a href="#encodings">encodings</a>
  &#8226;   <a href="#encodings.aliases">encodings.aliases</a>
  &#8226;   <a href="#encodings.ascii">encodings.ascii</a>
@@ -228,6 +229,8 @@ imports:
  &#8226;   <a href="#encodings.uu_codec">encodings.uu_codec</a>
  &#8226;   <a href="#encodings.zlib_codec">encodings.zlib_codec</a>
  &#8226;   <a href="#enum">enum</a>
+ &#8226;   <a href="#ftplib">ftplib</a>
+ &#8226;   <a href="#ftputil">ftputil</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#heapq">heapq</a>
  &#8226;   <a href="#io">io</a>
@@ -575,7 +578,8 @@ imported by:
   <a target="code" href="///C:/program%20files/python39/lib/__future__.py" type="text/plain"><tt>__future__</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imported by:
-    <a href="#codeop">codeop</a>
+    <a href="#PySide2">PySide2</a>
+ &#8226;   <a href="#codeop">codeop</a>
  &#8226;   <a href="#doctest">doctest</a>
  &#8226;   <a href="#ordlookup">ordlookup</a>
  &#8226;   <a href="#pkg_resources._vendor.packaging">pkg_resources._vendor.packaging</a>
@@ -2760,6 +2764,7 @@ imported by:
  &#8226;   <a href="#requests.auth">requests.auth</a>
  &#8226;   <a href="#secrets">secrets</a>
  &#8226;   <a href="#setuptools.package_index">setuptools.package_index</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#ssl">ssl</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
  &#8226;   <a href="#urllib3.util.request">urllib3.util.request</a>
@@ -4460,6 +4465,7 @@ imported by:
  &#8226;   <a href="#setuptools.depends">setuptools.depends</a>
  &#8226;   <a href="#setuptools.msvc">setuptools.msvc</a>
  &#8226;   <a href="#setuptools.sandbox">setuptools.sandbox</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#test.support">test.support</a>
  &#8226;   <a href="#typing">typing</a>
@@ -6715,6 +6721,7 @@ imported by:
  &#8226;   <a href="#setuptools._vendor.packaging.tags">setuptools._vendor.packaging.tags</a>
  &#8226;   <a href="#setuptools.windows_support">setuptools.windows_support</a>
  &#8226;   <a href="#test.support">test.support</a>
+ &#8226;   <a href="#vitagamecopier.py">vitagamecopier.py</a>
 
   </div>
 
@@ -6805,6 +6812,8 @@ imported by:
  &#8226;   <a href="#cryptography.x509.extensions">cryptography.x509.extensions</a>
  &#8226;   <a href="#cryptography.x509.ocsp">cryptography.x509.ocsp</a>
  &#8226;   <a href="#email.utils">email.utils</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
+ &#8226;   <a href="#ftputil.stat">ftputil.stat</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#http.server">http.server</a>
  &#8226;   <a href="#pkg_resources._vendor.pyparsing">pkg_resources._vendor.pyparsing</a>
@@ -10535,6 +10544,7 @@ imported by:
  &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
  &#8226;   <a href="#distutils.dir_util">distutils.dir_util</a>
  &#8226;   <a href="#distutils.file_util">distutils.file_util</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
  &#8226;   <a href="#gettext">gettext</a>
  &#8226;   <a href="#gzip">gzip</a>
  &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
@@ -10646,7 +10656,285 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#urllib.request">urllib.request</a>
+    <a href="#ftputil.error">ftputil.error</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
+ &#8226;   <a href="#ftputil.session">ftputil.session</a>
+ &#8226;   <a href="#urllib.request">urllib.request</a>
+ &#8226;   <a href="#vitagamecopier.py">vitagamecopier.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/__init__.py" type="text/plain"><tt>ftputil</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#ftputil.host">ftputil.host</a>
+ &#8226;   <a href="#ftputil.version">ftputil.version</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.error">ftputil.error</a>
+ &#8226;   <a href="#ftputil.file">ftputil.file</a>
+ &#8226;   <a href="#ftputil.file_transfer">ftputil.file_transfer</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
+ &#8226;   <a href="#ftputil.lrucache">ftputil.lrucache</a>
+ &#8226;   <a href="#ftputil.path">ftputil.path</a>
+ &#8226;   <a href="#ftputil.path_encoding">ftputil.path_encoding</a>
+ &#8226;   <a href="#ftputil.session">ftputil.session</a>
+ &#8226;   <a href="#ftputil.stat">ftputil.stat</a>
+ &#8226;   <a href="#ftputil.stat_cache">ftputil.stat_cache</a>
+ &#8226;   <a href="#ftputil.tool">ftputil.tool</a>
+ &#8226;   <a href="#ftputil.version">ftputil.version</a>
+ &#8226;   <a href="#vitagamecopier.py">vitagamecopier.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.error"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/error.py" type="text/plain"><tt>ftputil.error</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ftplib">ftplib</a>
+ &#8226;   <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#ftputil.path_encoding">ftputil.path_encoding</a>
+ &#8226;   <a href="#ftputil.tool">ftputil.tool</a>
+ &#8226;   <a href="#ftputil.version">ftputil.version</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.file">ftputil.file</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
+ &#8226;   <a href="#ftputil.path">ftputil.path</a>
+ &#8226;   <a href="#ftputil.stat">ftputil.stat</a>
+ &#8226;   <a href="#ftputil.stat_cache">ftputil.stat_cache</a>
+ &#8226;   <a href="#ftputil.tool">ftputil.tool</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.file"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/file.py" type="text/plain"><tt>ftputil.file</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#ftputil.error">ftputil.error</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.host">ftputil.host</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.file_transfer"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/file_transfer.py" type="text/plain"><tt>ftputil.file_transfer</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#ftputil.stat">ftputil.stat</a>
+ &#8226;   <a href="#os">os</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.host">ftputil.host</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.host"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/host.py" type="text/plain"><tt>ftputil.host</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#datetime">datetime</a>
+ &#8226;   <a href="#errno">errno</a>
+ &#8226;   <a href="#ftplib">ftplib</a>
+ &#8226;   <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#ftputil.error">ftputil.error</a>
+ &#8226;   <a href="#ftputil.file">ftputil.file</a>
+ &#8226;   <a href="#ftputil.file_transfer">ftputil.file_transfer</a>
+ &#8226;   <a href="#ftputil.path">ftputil.path</a>
+ &#8226;   <a href="#ftputil.path_encoding">ftputil.path_encoding</a>
+ &#8226;   <a href="#ftputil.session">ftputil.session</a>
+ &#8226;   <a href="#ftputil.stat">ftputil.stat</a>
+ &#8226;   <a href="#ftputil.tool">ftputil.tool</a>
+ &#8226;   <a href="#stat">stat</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#time">time</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil">ftputil</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.lrucache"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/lrucache.py" type="text/plain"><tt>ftputil.lrucache</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#time">time</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.stat_cache">ftputil.stat_cache</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.path"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/path.py" type="text/plain"><tt>ftputil.path</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#ftputil.error">ftputil.error</a>
+ &#8226;   <a href="#ftputil.tool">ftputil.tool</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#posixpath">posixpath</a>
+ &#8226;   <a href="#stat">stat</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.host">ftputil.host</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.path_encoding"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/path_encoding.py" type="text/plain"><tt>ftputil.path_encoding</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.error">ftputil.error</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.session"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/session.py" type="text/plain"><tt>ftputil.session</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ftplib">ftplib</a>
+ &#8226;   <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#ftputil.tool">ftputil.tool</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.host">ftputil.host</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.stat"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/stat.py" type="text/plain"><tt>ftputil.stat</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#datetime">datetime</a>
+ &#8226;   <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#ftputil.error">ftputil.error</a>
+ &#8226;   <a href="#ftputil.stat_cache">ftputil.stat_cache</a>
+ &#8226;   <a href="#math">math</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#stat">stat</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.file_transfer">ftputil.file_transfer</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.stat_cache"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/stat_cache.py" type="text/plain"><tt>ftputil.stat_cache</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#ftputil.error">ftputil.error</a>
+ &#8226;   <a href="#ftputil.lrucache">ftputil.lrucache</a>
+ &#8226;   <a href="#time">time</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.stat">ftputil.stat</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.tool"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/tool.py" type="text/plain"><tt>ftputil.tool</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#ftputil.error">ftputil.error</a>
+ &#8226;   <a href="#os">os</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil.error">ftputil.error</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
+ &#8226;   <a href="#ftputil.path">ftputil.path</a>
+ &#8226;   <a href="#ftputil.session">ftputil.session</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ftputil.version"></a>
+  <a target="code" href="///C:/Users/azure/AppData/Roaming/Python/Python39/site-packages/ftputil/version.py" type="text/plain"><tt>ftputil.version</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ftputil">ftputil</a>
+ &#8226;   <a href="#ftputil.error">ftputil.error</a>
 
   </div>
 
@@ -10757,6 +11045,7 @@ imported by:
  &#8226;   <a href="#setuptools.monkey">setuptools.monkey</a>
  &#8226;   <a href="#setuptools.package_index">setuptools.package_index</a>
  &#8226;   <a href="#setuptools.sandbox">setuptools.sandbox</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#signal">signal</a>
  &#8226;   <a href="#six">six</a>
  &#8226;   <a href="#tempfile">tempfile</a>
@@ -11382,7 +11671,6 @@ imports:
  &#8226;   <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
  &#8226;   <a href="#importlib._common">importlib._common</a>
  &#8226;   <a href="#importlib.abc">importlib.abc</a>
- &#8226;   <a href="#importlib.machinery">importlib.machinery</a>
  &#8226;   <a href="#sys">sys</a>
  &#8226;   <a href="#types">types</a>
  &#8226;   <a href="#warnings">warnings</a>
@@ -11540,7 +11828,6 @@ imported by:
  &#8226;   <a href="#cffi.verifier">cffi.verifier</a>
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
  &#8226;   <a href="#imp">imp</a>
- &#8226;   <a href="#importlib">importlib</a>
  &#8226;   <a href="#importlib.abc">importlib.abc</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#numpy.compat.py3k">numpy.compat.py3k</a>
@@ -11845,6 +12132,7 @@ imported by:
  &#8226;   <a href="#setuptools.dist">setuptools.dist</a>
  &#8226;   <a href="#setuptools.msvc">setuptools.msvc</a>
  &#8226;   <a href="#setuptools.package_index">setuptools.package_index</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#shlex">shlex</a>
  &#8226;   <a href="#six">six</a>
  &#8226;   <a href="#socket">socket</a>
@@ -12075,6 +12363,7 @@ imported by:
 <span class="moduletype">SourceModule</span>  <div class="import">
 imported by:
     <a href="#collections">collections</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#vitagamecopier.py">vitagamecopier.py</a>
 
   </div>
@@ -12244,6 +12533,7 @@ imported by:
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#setuptools.command.bdist_egg">setuptools.command.bdist_egg</a>
  &#8226;   <a href="#setuptools.depends">setuptools.depends</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#zipimport">zipimport</a>
 
   </div>
@@ -12266,6 +12556,7 @@ imported by:
  &#8226;   <a href="#cryptography.hazmat.primitives.asymmetric.rsa">cryptography.hazmat.primitives.asymmetric.rsa</a>
  &#8226;   <a href="#datetime">datetime</a>
  &#8226;   <a href="#fractions">fractions</a>
+ &#8226;   <a href="#ftputil.stat">ftputil.stat</a>
  &#8226;   <a href="#numpy.core.machar">numpy.core.machar</a>
  &#8226;   <a href="#numpy.lib">numpy.lib</a>
  &#8226;   <a href="#numpy.lib.index_tricks">numpy.lib.index_tricks</a>
@@ -12343,6 +12634,7 @@ imports:
  &#8226;   <a href="#multiprocessing.AuthenticationError">multiprocessing.AuthenticationError</a>
  &#8226;   <a href="#multiprocessing.BufferTooShort">multiprocessing.BufferTooShort</a>
  &#8226;   <a href="#multiprocessing.TimeoutError">multiprocessing.TimeoutError</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
  &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
  &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
  &#8226;   <a href="#multiprocessing.get_context">multiprocessing.get_context</a>
@@ -12457,6 +12749,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
  &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
  &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
  &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
@@ -17289,6 +17582,7 @@ imported by:
  &#8226;   <a href="#PyInstaller.utils.osx">PyInstaller.utils.osx</a>
  &#8226;   <a href="#PyInstaller.utils.win32.winmanifest">PyInstaller.utils.win32.winmanifest</a>
  &#8226;   <a href="#PyInstaller.utils.win32.winutils">PyInstaller.utils.win32.winutils</a>
+ &#8226;   <a href="#PySide2">PySide2</a>
  &#8226;   <a href="#PySimpleGUI.PySimpleGUI">PySimpleGUI.PySimpleGUI</a>
  &#8226;   <a href="#_bootsubprocess">_bootsubprocess</a>
  &#8226;   <a href="#_distutils_hack">_distutils_hack</a>
@@ -17356,6 +17650,9 @@ imported by:
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#fileinput">fileinput</a>
  &#8226;   <a href="#fnmatch">fnmatch</a>
+ &#8226;   <a href="#ftputil.file_transfer">ftputil.file_transfer</a>
+ &#8226;   <a href="#ftputil.path">ftputil.path</a>
+ &#8226;   <a href="#ftputil.tool">ftputil.tool</a>
  &#8226;   <a href="#genericpath">genericpath</a>
  &#8226;   <a href="#getopt">getopt</a>
  &#8226;   <a href="#getpass">getpass</a>
@@ -17510,6 +17807,7 @@ imported by:
  &#8226;   <a href="#setuptools.package_index">setuptools.package_index</a>
  &#8226;   <a href="#setuptools.sandbox">setuptools.sandbox</a>
  &#8226;   <a href="#setuptools.wheel">setuptools.wheel</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#shlex">shlex</a>
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#socket">socket</a>
@@ -18033,6 +18331,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#fnmatch">fnmatch</a>
+ &#8226;   <a href="#ftputil.path">ftputil.path</a>
  &#8226;   <a href="#http.server">http.server</a>
  &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#mimetypes">mimetypes</a>
@@ -18830,6 +19129,7 @@ imported by:
  &#8226;   <a href="#fnmatch">fnmatch</a>
  &#8226;   <a href="#fractions">fractions</a>
  &#8226;   <a href="#ftplib">ftplib</a>
+ &#8226;   <a href="#ftputil.stat">ftputil.stat</a>
  &#8226;   <a href="#gettext">gettext</a>
  &#8226;   <a href="#glob">glob</a>
  &#8226;   <a href="#html">html</a>
@@ -18923,6 +19223,7 @@ imported by:
  &#8226;   <a href="#setuptools.package_index">setuptools.package_index</a>
  &#8226;   <a href="#setuptools.sandbox">setuptools.sandbox</a>
  &#8226;   <a href="#setuptools.wheel">setuptools.wheel</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#shlex">shlex</a>
  &#8226;   <a href="#string">string</a>
  &#8226;   <a href="#sysconfig">sysconfig</a>
@@ -19953,6 +20254,9 @@ imported by:
  &#8226;   <a href="#distutils.command.build_scripts">distutils.command.build_scripts</a>
  &#8226;   <a href="#distutils.dep_util">distutils.dep_util</a>
  &#8226;   <a href="#distutils.file_util">distutils.file_util</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
+ &#8226;   <a href="#ftputil.path">ftputil.path</a>
+ &#8226;   <a href="#ftputil.stat">ftputil.stat</a>
  &#8226;   <a href="#genericpath">genericpath</a>
  &#8226;   <a href="#netrc">netrc</a>
  &#8226;   <a href="#ntpath">ntpath</a>
@@ -20106,6 +20410,7 @@ imported by:
  &#8226;   <a href="#requests.utils">requests.utils</a>
  &#8226;   <a href="#setuptools._vendor.packaging.tags">setuptools._vendor.packaging.tags</a>
  &#8226;   <a href="#setuptools.command.easy_install">setuptools.command.easy_install</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#six">six</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#test.support">test.support</a>
@@ -20242,6 +20547,7 @@ imported by:
  &#8226;   <a href="#PyInstaller.utils.win32.icon">PyInstaller.utils.win32.icon</a>
  &#8226;   <a href="#PyInstaller.utils.win32.winmanifest">PyInstaller.utils.win32.winmanifest</a>
  &#8226;   <a href="#PyInstaller.utils.win32.winutils">PyInstaller.utils.win32.winutils</a>
+ &#8226;   <a href="#PySide2">PySide2</a>
  &#8226;   <a href="#PySimpleGUI.PySimpleGUI">PySimpleGUI.PySimpleGUI</a>
  &#8226;   <a href="#__main__">__main__</a>
  &#8226;   <a href="#_aix_support">_aix_support</a>
@@ -20326,6 +20632,9 @@ imported by:
  &#8226;   <a href="#fileinput">fileinput</a>
  &#8226;   <a href="#fractions">fractions</a>
  &#8226;   <a href="#ftplib">ftplib</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
+ &#8226;   <a href="#ftputil.path_encoding">ftputil.path_encoding</a>
+ &#8226;   <a href="#ftputil.version">ftputil.version</a>
  &#8226;   <a href="#getopt">getopt</a>
  &#8226;   <a href="#getpass">getpass</a>
  &#8226;   <a href="#gettext">gettext</a>
@@ -20486,6 +20795,7 @@ imported by:
  &#8226;   <a href="#setuptools.package_index">setuptools.package_index</a>
  &#8226;   <a href="#setuptools.sandbox">setuptools.sandbox</a>
  &#8226;   <a href="#setuptools.unicode_utils">setuptools.unicode_utils</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#shlex">shlex</a>
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#six">six</a>
@@ -20675,6 +20985,7 @@ imported by:
  &#8226;   <a href="#setuptools.command.easy_install">setuptools.command.easy_install</a>
  &#8226;   <a href="#setuptools.installer">setuptools.installer</a>
  &#8226;   <a href="#setuptools.sandbox">setuptools.sandbox</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#test.support">test.support</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
  &#8226;   <a href="#urllib.response">urllib.response</a>
@@ -20708,6 +21019,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#PyInstaller.utils.hooks">PyInstaller.utils.hooks</a>
+ &#8226;   <a href="#PySide2">PySide2</a>
  &#8226;   <a href="#PySimpleGUI.PySimpleGUI">PySimpleGUI.PySimpleGUI</a>
  &#8226;   <a href="#argparse">argparse</a>
  &#8226;   <a href="#numpy.core.overrides">numpy.core.overrides</a>
@@ -20727,6 +21039,7 @@ imported by:
  &#8226;   <a href="#setuptools.command.easy_install">setuptools.command.easy_install</a>
  &#8226;   <a href="#setuptools.dist">setuptools.dist</a>
  &#8226;   <a href="#setuptools.sandbox">setuptools.sandbox</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
 
   </div>
 
@@ -20823,6 +21136,9 @@ imported by:
  &#8226;   <a href="#email._parseaddr">email._parseaddr</a>
  &#8226;   <a href="#email.generator">email.generator</a>
  &#8226;   <a href="#email.utils">email.utils</a>
+ &#8226;   <a href="#ftputil.host">ftputil.host</a>
+ &#8226;   <a href="#ftputil.lrucache">ftputil.lrucache</a>
+ &#8226;   <a href="#ftputil.stat_cache">ftputil.stat_cache</a>
  &#8226;   <a href="#gc">gc</a>
  &#8226;   <a href="#gzip">gzip</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
@@ -21261,6 +21577,7 @@ imported by:
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#pyparsing">pyparsing</a>
  &#8226;   <a href="#setuptools._vendor.pyparsing">setuptools._vendor.pyparsing</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#socketserver">socketserver</a>
  &#8226;   <a href="#test.support.testresult">test.support.testresult</a>
  &#8226;   <a href="#threading">threading</a>
@@ -21379,6 +21696,7 @@ imported by:
  &#8226;   <a href="#setuptools._vendor.pyparsing">setuptools._vendor.pyparsing</a>
  &#8226;   <a href="#setuptools.command.bdist_egg">setuptools.command.bdist_egg</a>
  &#8226;   <a href="#setuptools.monkey">setuptools.monkey</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#six">six</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#sysconfig">sysconfig</a>
@@ -21476,6 +21794,7 @@ imported by:
  &#8226;   <a href="#setuptools._vendor.packaging.utils">setuptools._vendor.packaging.utils</a>
  &#8226;   <a href="#setuptools._vendor.packaging.version">setuptools._vendor.packaging.version</a>
  &#8226;   <a href="#setuptools.dist">setuptools.dist</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
 
   </div>
 
@@ -23761,6 +24080,7 @@ imported by:
  &#8226;   <a href="#setuptools.command.bdist_egg">setuptools.command.bdist_egg</a>
  &#8226;   <a href="#setuptools.command.easy_install">setuptools.command.easy_install</a>
  &#8226;   <a href="#setuptools.wheel">setuptools.wheel</a>
+ &#8226;   <a href="#shiboken2">shiboken2</a>
  &#8226;   <a href="#shutil">shutil</a>
 
   </div>

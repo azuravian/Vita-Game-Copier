@@ -1,7 +1,7 @@
 ('c:\\program '
  'files\\python39\\lib\\site-packages\\cffi-1.14.6-py3.9-win-amd64.egg',
  None,
- {'*.pyd', '*.pyw', 'EGG-INFO', '*.pyc', '*.py', '*.cp39-win_amd64.pyd'},
+ {'*.pyc', '*.cp39-win_amd64.pyd', '*.pyd', '*.py', '*.pyw', 'EGG-INFO'},
  'DATA',
  [('cffi\\parse_c_type.h',
    'c:\\program '
